@@ -1,9 +1,12 @@
 .card-component {
   background-color: #f0f0f0;
+  /* padding: 10px; */
+  /* margin: 15px; */
 }
 .card-footer {
   border: none;
   box-shadow: none;
+  background-color: #f0f0f0;
 }
 .viewdetails-button{
     background-color: #c371a3;

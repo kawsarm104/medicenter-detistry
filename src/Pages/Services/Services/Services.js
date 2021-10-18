@@ -6,7 +6,7 @@ const Services = () => {
   const [services] = useServices();
   //   console.log(services);
   return (
-    <div className="container-fluid row  mt-3 mx-auto m-3">
+    <div className="container-fluid row  mt-3 mx-auto">
       {/* Showing in services page  */}
 
       {services.map((service) => (

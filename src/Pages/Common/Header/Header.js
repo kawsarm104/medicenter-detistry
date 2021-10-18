@@ -2,12 +2,13 @@ import React from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import logo from "../../../images/logo/medicenter-logo.png";
+import './Header.css'
 
 const Header = () => {
   return (
-    <Navbar bg="light" expand="lg" className="p-3">
-      <Container className="">
-        <Navbar.Brand as={NavLink} to="/">
+    <Navbar  expand="lg" className="p-3 mt-4 navbar-class" sticky="top">
+      <Container fluid className="">
+        <Navbar.Brand as={NavLink} className="ms-3" to="/">
           <img
             alt=""
             src={logo}
@@ -20,7 +21,7 @@ const Header = () => {
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto ">
+          <Nav className="ms-auto me-5">
             <Nav.Link as={NavLink} to="/home">
               Home
             </Nav.Link>
