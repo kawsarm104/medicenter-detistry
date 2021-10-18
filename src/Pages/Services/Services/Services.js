@@ -4,11 +4,9 @@ import Service from "../Service/Service";
 
 const Services = () => {
   const [services] = useServices();
-//   console.log(services);
+  //   console.log(services);
   return (
-    <div className="container-fluid row  mt-3 mx-auto">
-      {/* <h1 className=" mb-3">{services.length} services Available</h1> */}
-
+    <div className="container-fluid row  mt-3 mx-auto m-3">
       {/* Showing in services page  */}
 
       {services.map((service) => (

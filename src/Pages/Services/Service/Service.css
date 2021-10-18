@@ -1,0 +1,10 @@
+.card-component {
+  background-color: #f0f0f0;
+}
+.card-footer {
+  border: none;
+  box-shadow: none;
+}
+.viewdetails-button{
+    background-color: #c371a3;
+}
