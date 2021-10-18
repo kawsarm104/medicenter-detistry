@@ -1,0 +1,15 @@
+.footer-class{
+    background-color: #2e3033;
+    color: white;
+}
+.additional-navlink {
+    color: white;
+}
+hr{
+    /* background-color: #c371a3; */
+    border: 2px solid #c371a3 ;
+}
+.footer-bottom{
+    padding-top: 7px;
+    background-color: #000000;
+}
