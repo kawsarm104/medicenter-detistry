@@ -9,7 +9,6 @@ import {
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../Pages/Auth/Firebase/firebase.init";
 
-
 initializeAuthentication();
 
 const useFirebase = () => {

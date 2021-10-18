@@ -1,42 +1,43 @@
 {
   "services": [
     {
-      "id": 1,
+      "id": "1",
       "image": "https://quanticalabs.com/wp_themes/medicenter-dentist/files/2018/10/image_01-5.jpg",
       "serviceName": "HEALTHCARE CENTER",
       "shortDetails": "Our goal is to provide a patient-centered medical home for all patients",
       "details": "When you need treatment for minor injuries and illnesses, but the doctor is not available, Medicenter immediate care services have you covered. Our immediate care locations combine easy-to-access services with our well-known standards for delivering the best care."
     },
     {
-      "id": 2,
+      "id": "2",
       "image": "https://quanticalabs.com/wp_themes/medicenter-dentist/files/2018/10/image_02-5.jpg",
       "serviceName": "IMMEDIATE CARE",
       "shortDetails": "Effective and affordable treatment for non-life threatening illnesses",
       "details": "When you need treatment for minor injuries and illnesses, but the doctor is not available, Medicenter immediate care services have you covered. Our immediate care locations combine easy-to-access services with our well-known standards for delivering the best care."
     },
     {
-      "id": 3,
-      "image": "https://quanticalabs.com/wp_themes/medicenter-dentist/files/2018/10/image_03-5.jpg",
+      "id": "3",
+      "image": "https://quanticalabs.com/wp_themes/medicenter-dentist/files/2018/10/image_03-2.jpg",
       "serviceName": "DIAGNOSTIC CENTER",
       "shortDetails": "Offers a wide array of reliable lab and diagnostic imaging services",
       "details": "When you need treatment for minor injuries and illnesses, but the doctor is not available, Medicenter immediate care services have you covered. Our immediate care locations combine easy-to-access services with our well-known standards for delivering the best care."
     },
     {
-      "id": 4,
-      "image": "https://quanticalabs.com/wp_themes/medicenter-dentist/files/2018/10/image_04-5.jpg",
+      "id": "4",
+      "image": "https://quanticalabs.com/wp_themes/medicenter-dentist/files/2018/10/image_04-1.jpg",
       "serviceName": "PEDIATRIC SERVICES",
-      "shortDetails": "When you need treatment for minor injuries and illnesses, but the doctor is not available, Medicenter immediate care services have you covered. Our immediate care locations combine easy-to-access services with our well-known standards for delivering the best care."
+      "shortDetails":"Dedicated to helping you and your child stay healthy through every milestone",
+      "details": "When you need treatment for minor injuries and illnesses, but the doctor is not available, Medicenter immediate care services have you covered. Our immediate care locations combine easy-to-access services with our well-known standards for delivering the best care."
     },
     {
-      "id": 5,
-      "image": "https://quanticalabs.com/wp_themes/medicenter-dentist/files/2018/10/image_05-5.jpg",
+      "id": "5",
+      "image": "https://quanticalabs.com/wp_themes/medicenter-dentist/files/2018/10/image_05.jpg",
       "serviceName": "PHYSICAL THERAPY",
       "shortDetails": "Reduce pain, restore function to the body and prevent future injury",
       "details": "When you need treatment for minor injuries and illnesses, but the doctor is not available, Medicenter immediate care services have you covered. Our immediate care locations combine easy-to-access services with our well-known standards for delivering the best care."
     },
     {
-      "id": 6,
-      "image": "https://quanticalabs.com/wp_themes/medicenter-dentist/files/2018/10/image_06-5.jpg",
+      "id": "6",
+      "image": "https://quanticalabs.com/wp_themes/medicenter-dentist/files/2018/10/image_06.jpg",
       "serviceName": "OCCUPATIONAL HEALTH",
       "shortDetails": "Occupational health team keep people well at work physically and mentally",
       "details": "When you need treatment for minor injuries and illnesses, but the doctor is not available, Medicenter immediate care services have you covered. Our immediate care locations combine easy-to-access services with our well-known standards for delivering the best care."

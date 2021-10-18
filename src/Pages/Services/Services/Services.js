@@ -1,11 +1,21 @@
-import React from 'react';
+import React from "react";
+import useServices from "../../../Hooks/useServices";
+import Service from "../Service/Service";
 
 const Services = () => {
-    return (
-        <div>
-            services
-        </div>
-    );
+  const [services] = useServices();
+//   console.log(services);
+  return (
+    <div className="container-fluid row  mt-3 mx-auto">
+      {/* <h1 className=" mb-3">{services.length} services Available</h1> */}
+
+      {/* Showing in services page  */}
+
+      {services.map((service) => (
+        <Service key={service.id} service={service}></Service>
+      ))}
+    </div>
+  );
 };
 
 export default Services;
