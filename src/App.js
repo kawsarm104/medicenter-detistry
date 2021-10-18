@@ -8,20 +8,9 @@ import Footer from "./Pages/Common/Footer/Footer";
 import Header from "./Pages/Common/Header/Header";
 import Contact from "./Pages/Contact/Contact";
 import NotFound from "./Pages/Error/NotFound";
-import Home from "./Pages/Home/Home";
+import Home from "./Pages/Home/Home/Home";
 import ServiceDetails from "./Pages/Services/ServiceDetails/ServiceDetails";
 import Services from "./Pages/Services/Services/Services";
-// import About from "./pages/About/About";
-// import Contact from "./pages/Contact/Contact";
-// import Footer from "./pages/Footer/Footer";
-// import Header from "./pages/Header/Header";
-// import Home from "./pages/Home/Home";
-// import Login from "./pages/Login/Login/Login";
-// import PrivateRoute from "./pages/Login/PrivateRoute/PrivateRoute";
-// import NotFound from "./pages/NotFound/NotFound";
-// import Services from "./pages/Service/Services";
-// import Servicedetails from "./pages/ServiceDetails/Servicedetails";
-// import AuthProvider from "./contexts/AuthProvider";
 
 function App() {
   return (
@@ -50,7 +39,7 @@ function App() {
               <Contact></Contact>
             </Route>
             <Route path="/login">
-            <Signin></Signin>
+              <Signin></Signin>
             </Route>
             <Route path="*">
               <NotFound></NotFound>
