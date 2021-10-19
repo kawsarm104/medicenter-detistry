@@ -46,7 +46,7 @@ const useFirebase = () => {
     return () => unsubscribed;
   }, []);
 
-  const logOut = () => {
+  const Signout = () => {
     setIsLoading(true);
     signOut(auth)
       .then(() => {})
@@ -59,7 +59,7 @@ const useFirebase = () => {
     isLoading,
     setIsLoading,
     signInUsingGoogle,
-    logOut,
+    Signout,
     signInUsingFacebook,
   };
 };

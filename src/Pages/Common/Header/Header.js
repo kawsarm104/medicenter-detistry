@@ -1,12 +1,14 @@
 import React from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import useAuth from "../../../Hooks/useAuth";
 import logo from "../../../images/logo/medicenter-logo.png";
 import './Header.css'
 
 const Header = () => {
+  const { user,Signout } = useAuth();
   return (
-    <Navbar  expand="lg" className="p-3 mt-4 navbar-class" sticky="top">
+    <Navbar expand="lg" className="p-3 mt-4 navbar-class" sticky="top">
       <Container fluid className="">
         <Navbar.Brand as={NavLink} className="ms-3" to="/">
           <img
@@ -33,6 +35,9 @@ const Header = () => {
             </Nav.Link>
             <Nav.Link as={NavLink} to="/login">
               Login
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="#">
+              {user.displayName && <div>{user.displayName} </div>}
             </Nav.Link>
 
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
