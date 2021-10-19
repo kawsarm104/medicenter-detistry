@@ -22,7 +22,7 @@ const Service = (props) => {
             <Link to={`/service/${id}`}>
               <Button
                 variant=""
-                className="btn  text-dark button-style w-100 mt-2 viewdetails-button"
+                className="btn   button-style w-100 mt-2 viewdetails-button"
               >
                 View Details
               </Button>

@@ -4,8 +4,10 @@ import { Col, Container, Row } from "react-bootstrap";
 import p1image from "../../../images/patient/image_01.jpg";
 import p2image from "../../../images/patient/image_02.jpg";
 import p3image from "../../../images/patient/image_03.jpg";
+import image from "../../../images/patient/patientdivimage.PNG";
 import icon1 from "../../../images/icon/medicenter-dear-patient-icon1.PNG";
 import icon2 from "../../../images/icon/medicenter-dear-patient-icon2.PNG";
+// import image from "../../../images/icon/";
 import "./DearPatient.css";
 
 const DearPatient = () => {
@@ -15,10 +17,10 @@ const DearPatient = () => {
         <Col sm={10} md={6} className="mb-2">
           <Row>
             <Col sm={12} md={12}>
-              <img src={p1image} className="img-fluid" alt="" />
+              <img src={image} className="img-fluid" alt="" />
             </Col>
 
-            <Col sm={12} className="p-3">
+            {/* <Col sm={12} className="p-3">
               <Row className="">
                 <Col sm={3} md={6}>
                   <img src={p2image} className="img-fluid mt-4" alt="" />
@@ -27,7 +29,7 @@ const DearPatient = () => {
                   <img src={p3image} className="img-fluid" alt="" />
                 </Col>
               </Row>
-            </Col>
+            </Col> */}
           </Row>
         </Col>
         <Col sm={10} md={6}>

@@ -8,7 +8,11 @@
   box-shadow: none;
   background-color: #f0f0f0;
 }
-.viewdetails-button{
-    background-color: #c371a3;
-    cursor: pointer;
+.viewdetails-button {
+  background-color: #c371a3;
+  /* cursor: pointer; */
+}
+.viewdetails-button:hover {
+  background-color: grey;
+  color: #ffff;
 }
