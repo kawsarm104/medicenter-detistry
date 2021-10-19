@@ -7,6 +7,7 @@ import Signin from "./Pages/Auth/Signin/Signin";
 import Footer from "./Pages/Common/Footer/Footer";
 import Header from "./Pages/Common/Header/Header";
 import Contact from "./Pages/Contact/Contact";
+import Doctors from "./Pages/Doctors/Doctors";
 import NotFound from "./Pages/Error/NotFound";
 import Home from "./Pages/Home/Home/Home";
 import ServiceDetails from "./Pages/Services/ServiceDetails/ServiceDetails";
@@ -35,6 +36,9 @@ function App() {
             <PrivateRoute path="/service/:serviceId">
               <ServiceDetails></ServiceDetails>
             </PrivateRoute>
+            <PrivateRoute path="/doctors">
+              <Doctors></Doctors>
+            </PrivateRoute>
             <Route path="/contact">
               <Contact></Contact>
             </Route>
@@ -45,7 +49,7 @@ function App() {
               <NotFound></NotFound>
             </Route>
           </Switch>
-          {/* <Slider/> */}
+          
           <Footer></Footer>
         </Router>
       </AuthProvider>
