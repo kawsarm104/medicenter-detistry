@@ -36,14 +36,20 @@ const Header = () => {
             <Nav.Link as={NavLink} to="/contact">
               Contact
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/signin">
-              Signin
-            </Nav.Link>
 
-            {user.displayName && (
+            {user.displayName ? (
               <Nav.Link as={NavLink} to="#">
-                {user.displayName}
-                <button onClick={Signout}>Ber ho beda</button>{" "}
+               Welcome: {user.displayName}
+                <button
+                  onClick={Signout}
+                  style={{ border: "none", backgroundColor: "white" }}
+                >
+                  Signout
+                </button>{" "}
+              </Nav.Link>
+            ) : (
+              <Nav.Link as={NavLink} to="/signin">
+                Signin
               </Nav.Link>
             )}
           </Nav>

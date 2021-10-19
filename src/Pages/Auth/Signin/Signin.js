@@ -112,21 +112,7 @@ const Signin = () => {
         </div>
       </div>
 
-      {/* <button onClick={signInUsingGoogle} className="btn btn-outline-info">Google Sign In</button> */}
-      {/* <div className="">
-        <button
-          onClick={handleGoogleSignin}
-          className="btn btn-outline-info mt-3"
-        >
-          Google Signin
-        </button>
-        <button
-          onClick={handleGoogleSignin}
-          className="btn btn-outline-info mt-3"
-        >
-          Facebook Signin
-        </button>
-      </div> */}
+     
     </div>
   );
 };
