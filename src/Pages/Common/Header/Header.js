@@ -8,7 +8,7 @@ import "./Header.css";
 const Header = () => {
   const { user, Signout } = useAuth();
   return (
-    <Navbar expand="lg" className="p-3 mt-4 navbar-class" sticky="top">
+    <Navbar expand="lg" className="p-3 mt-3 mb-2 navbar-class" sticky="top">
       <Container fluid className="">
         <Navbar.Brand as={NavLink} className="ms-3" to="/">
           <img
