@@ -1,69 +1,90 @@
-import React from "react";
+import React, { useState } from "react";
+import useFirebase from "../../../Hooks/useFirebase";
 import { useHistory, useLocation } from "react-router";
-import { Link } from "react-router-dom";
-// import useAuth from './../../../hooks/useAuth';
-import useAuth from "../../../Hooks/useAuth";
+// import useFirebase from "../../Hook/useFirebase";
 
-const Signup = () => {
-  const { setUser, setIsLoading } = useAuth();
-  const location = useLocation();
-  const history = useHistory();
+const Login = () => {
+      const location = useLocation();
+      const history = useHistory();
+  const {
+    user,
+      setUser,
+    setIsLoading,
+    handleUserRegister,
+    handleUserLogin,
+  } = useFirebase();
+
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+
+  const hanldeEmail = (e) => {
+    setEmail(e.target.value);
+  };
+  const hanldePassword = (e) => {
+    setPassword(e.target.value);
+  };
+
+  // console.log(email, password);
+
+  const handleRegister = () => {
+    handleUserRegister(email, password);
+  };
+
+  const handleLogin = () => {
+      handleUserLogin(email, password)
+        .then((result) => {
+          history.push(location.state?.from || "/home");
+          // console.log(location.state?.from,"google er te");
+          setUser(result.user);
+        })
+        .finally(() => setIsLoading(false));
+  };
+
   return (
-    <div className="text-center Signin-container ">
-      <div className="container">
-        <div className="row">
-          <div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
-            <div className="card border-0 shadow rounded-3 my-5">
-              <div className="card-body p-4 p-sm-5">
-                <h2 className="card-title text-center mb-5  fs-5 ">
-                  Please Sign In
-                </h2>
-                <>
-                  <div className="form-floating mb-3">
-                    <input
-                      type="email"
-                      className="form-control"
-                      id="floatingInput"
-                      placeholder="name@example.com"
-                      required
-                    />
-                    <label htmlFor="floatingInput">Email address</label>
-                  </div>
-                  <div className="form-floating mb-3">
-                    <input
-                      type="password"
-                      className="form-control"
-                      id="floatingPassword"
-                      placeholder="Password"
-                    />
-                    <label htmlFor="floatingPassword">Password</label>
-                  </div>
-
-                  <div className="form-check mb-3">
-                    <label
-                      className="form-check-label"
-                      htmlFor="rememberPasswordCheck"
-                    >
-                      Already have an account ?{" "}
-                      <Link to="/signin">Signin here</Link>
-                    </label>
-                  </div>
-                  <div className="d-grid">
-                    <button
-                      className="btn btn-Signin text-uppercase fw-bold signin-btn"
-                      type="submit"
-                    >
-                      Signup
-                    </button>
-                  </div>
-                </>
+    <div className="div d-flex justify-content-center align-items-center">
+      <div className="row ">
+        <div className="col-md-6">
+          <div>
+            <div className="form-input mt-5">
+              <input
+                onChange={hanldeEmail}
+                className="mt-2 p-2"
+                type="email"
+                placeholder="Email"
+              />
+              <input
+                onChange={hanldeEmail}
+                className="mt-2 p-2"
+                type="email"
+                placeholder="Email"
+              />
+              <br />
+              <input
+                onChange={hanldePassword}
+                className="mt-2 p-2"
+                type="password"
+                placeholder="Password"
+              />
+              <br />
+              <div className="login-regiater-btn mt-4">
+                <button
+                  onClick={handleRegister}
+                  className="btn btn-primary me-1"
+                >
+                  Register
+                </button>
+                <button onClick={handleLogin} className="btn btn-success ms-1">
+                  Login
+                </button>
               </div>
             </div>
           </div>
         </div>
+        
       </div>
     </div>
   );
 };
 
-export default Signup;
+export default Login;
