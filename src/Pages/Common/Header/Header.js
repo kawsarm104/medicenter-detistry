@@ -3,10 +3,10 @@ import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
 import logo from "../../../images/logo/medicenter-logo.png";
-import './Header.css'
+import "./Header.css";
 
 const Header = () => {
-  const { user,Signout } = useAuth();
+  const { user, Signout } = useAuth();
   return (
     <Navbar expand="lg" className="p-3 mt-4 navbar-class" sticky="top">
       <Container fluid className="">
@@ -33,12 +33,16 @@ const Header = () => {
             <Nav.Link as={NavLink} to="/contact">
               Contact
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/login">
-              Login
+            <Nav.Link as={NavLink} to="/signin">
+              Signin
             </Nav.Link>
-            <Nav.Link as={NavLink} to="#">
-              {user.displayName && <div>{user.displayName} </div>}
-            </Nav.Link>
+
+            {user.displayName && (
+              <Nav.Link as={NavLink} to="/">
+                {user.displayName}
+                <button onClick={Signout}>Ber ho beda</button>{" "}
+              </Nav.Link>
+            )}
 
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
