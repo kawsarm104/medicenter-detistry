@@ -1,0 +1,14 @@
+body{
+    min-width: 100vh;
+}
+h2{
+    color: #c371a3;
+}
+.send-button {
+  background-color: #c371a3;
+  /* cursor: pointer; */
+}
+.send-button:hover {
+  background-color: grey;
+  color: #ffff;
+}
