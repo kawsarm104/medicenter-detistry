@@ -70,7 +70,7 @@ const Footer = () => {
       <Container fluid className="footer-bottom ">
         <Row>
           <Col sm={12} md={6}>
-            <div className="">
+            <div className="ms-2">
               <p>© 2021. All rights reserved kawsarm104@gmail.com</p>
             </div>
           </Col>

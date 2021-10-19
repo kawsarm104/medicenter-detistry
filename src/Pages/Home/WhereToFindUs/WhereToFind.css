@@ -1,0 +1,13 @@
+.where-to-find-us{
+    background-color: #f8f8f8;
+}
+hr{
+    width: 55px;
+}
+.learn-more-btn{
+    background-color:#c371a3;;
+}
+.learn-more-btn:hover{
+    background-color:grey;
+    color: white;
+}
