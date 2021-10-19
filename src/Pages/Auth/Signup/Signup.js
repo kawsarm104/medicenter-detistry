@@ -3,7 +3,7 @@ import useFirebase from "../../../Hooks/useFirebase";
 import { useHistory, useLocation } from "react-router";
 // import useFirebase from "../../Hook/useFirebase";
 
-const Login = () => {
+const Signup = () => {
       const location = useLocation();
       const history = useHistory();
   const {
@@ -47,12 +47,7 @@ const Login = () => {
         <div className="col-md-6">
           <div>
             <div className="form-input mt-5">
-              <input
-                onChange={hanldeEmail}
-                className="mt-2 p-2"
-                type="email"
-                placeholder="Email"
-              />
+              <input className="mt-2 p-2" type="name" placeholder="Name" />
               <input
                 onChange={hanldeEmail}
                 className="mt-2 p-2"
@@ -70,21 +65,20 @@ const Login = () => {
               <div className="login-regiater-btn mt-4">
                 <button
                   onClick={handleRegister}
-                  className="btn btn-primary me-1"
+                  className="btn  me-1 button-class "
                 >
                   Register
                 </button>
-                <button onClick={handleLogin} className="btn btn-success ms-1">
+                <button onClick={handleLogin} className="btn button-class ms-1">
                   Login
                 </button>
               </div>
             </div>
           </div>
         </div>
-        
       </div>
     </div>
   );
 };
 
-export default Login;
+export default Signup;
