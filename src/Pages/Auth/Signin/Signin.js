@@ -1,13 +1,13 @@
 import React from "react";
 import { useHistory, useLocation } from "react-router";
+import { Link } from "react-router-dom";
 // import useAuth from './../../../hooks/useAuth';
 import useAuth from "../../../Hooks/useAuth";
 import "./Signin.css";
 // import useAuth from './../../../Hooks/useAuth'
 
 const Signin = () => {
-  const { signInUsingGoogle, signInUsingFacebook, setUser, setIsLoading } =
-    useAuth();
+  const { signInUsingGoogle, setUser, setIsLoading } = useAuth();
   const location = useLocation();
   const history = useHistory();
   const handleGoogleSignin = () => {
@@ -16,16 +16,6 @@ const Signin = () => {
         history.push(location.state?.from || "/home");
         // console.log(location.state?.from,"google er te");
         setUser(result.user);
-      })
-      .finally(() => setIsLoading(false));
-  };
-  const handleFacebookSignin = () => {
-    signInUsingFacebook()
-      .then((result) => {
-        history.push(location.state?.from || "/home");
-        // console.log(location.state?.from, "facebook er te");
-        setUser(result.user);
-        // console.log("facebbok user", result.user)
       })
       .finally(() => setIsLoading(false));
   };
@@ -40,7 +30,7 @@ const Signin = () => {
           <div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
             <div className="card border-0 shadow rounded-3 my-5">
               <div className="card-body p-4 p-sm-5">
-                <h2 className="card-title text-center mb-5 fw-light fs-5 ">
+                <h2 className="card-title text-center mb-5  fs-5 ">
                   Please Sign In
                 </h2>
                 <>
@@ -64,22 +54,16 @@ const Signin = () => {
                   </div>
 
                   <div className="form-check mb-3">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="rememberPasswordCheck"
-                    />
                     <label
                       className="form-check-label"
                       htmlFor="rememberPasswordCheck"
                     >
-                      Remember password
+                      Need an account ? <Link to="/signup">Signup here</Link>
                     </label>
                   </div>
                   <div className="d-grid">
                     <button
-                      className="btn btn-info btn-Signin text-uppercase fw-bold"
+                      className="btn btn-Signin text-uppercase fw-bold signin-btn"
                       type="submit"
                     >
                       Sign in
@@ -95,7 +79,7 @@ const Signin = () => {
                       <i className="fab fa-google me-2"></i> Sign in with Google
                     </button>
                   </div>
-                  <div className="d-grid">
+                  {/* <div className="d-grid">
                     <button
                       onClick={handleFacebookSignin}
                       className="btn btn-facebook btn-Signin text-uppercase fw-bold"
@@ -104,15 +88,13 @@ const Signin = () => {
                       <i className="fab fa-facebook-f me-2"></i> Sign in with
                       Facebook
                     </button>
-                  </div>
+                  </div> */}
                 </>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-     
     </div>
   );
 };

@@ -4,6 +4,7 @@ import AuthProvider from "./contexts/AuthProvider";
 import About from "./Pages/About/About";
 import PrivateRoute from "./Pages/Auth/PrivateRoute/PrivateRoute";
 import Signin from "./Pages/Auth/Signin/Signin";
+import Signup from "./Pages/Auth/Signup/Signup";
 import Footer from "./Pages/Common/Footer/Footer";
 import Header from "./Pages/Common/Header/Header";
 import Contact from "./Pages/Contact/Contact";
@@ -44,6 +45,9 @@ function App() {
             </Route>
             <Route path="/signin">
               <Signin></Signin>
+            </Route>
+            <Route path="/signup">
+              <Signup></Signup>
             </Route>
             <Route path="*">
               <NotFound></NotFound>

@@ -11,6 +11,9 @@
   letter-spacing: 0.05rem;
   padding: 0.75rem 1rem;
 }
+.signin-btn{
+  background-color: #c371a3;
+}
 
 .btn-google {
   color: white !important;

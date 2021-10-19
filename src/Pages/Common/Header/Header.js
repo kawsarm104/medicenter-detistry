@@ -39,7 +39,7 @@ const Header = () => {
 
             {user.displayName ? (
               <Nav.Link as={NavLink} to="#">
-               Welcome: {user.displayName}
+                Welcome: {user.displayName}
                 <button
                   onClick={Signout}
                   style={{ border: "none", backgroundColor: "white" }}
