@@ -8,5 +8,6 @@
 - Private route (only signin user can access)
 - fully responsive
 - user can Signup with email and password
+- email password validation
 - also can signin with google
 - used react hooks form
