@@ -36,6 +36,9 @@ const Header = () => {
             <Nav.Link as={NavLink} to="/contact">
               Contact
             </Nav.Link>
+            {/* <Nav.Link as={NavLink} to="/signup">
+              Signup
+            </Nav.Link> */}
 
             {user.displayName ? (
               <Nav.Link as={NavLink} to="#">

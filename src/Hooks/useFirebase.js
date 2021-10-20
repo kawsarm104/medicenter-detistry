@@ -42,6 +42,7 @@ const useFirebase = () => {
     const unsubscribed = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
+      
       } else {
         setUser({});
       }
@@ -50,6 +51,7 @@ const useFirebase = () => {
     return () => unsubscribed;
   }, []);
   //email  pass
+  
   const handleUserRegister = (email, password, displayName) => {
     return createUserWithEmailAndPassword(auth, email, password, displayName);
     //  .then((result) => {

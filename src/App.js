@@ -49,11 +49,12 @@ function App() {
             <Route path="/signup">
               <Signup></Signup>
             </Route>
+
             <Route path="*">
               <NotFound></NotFound>
             </Route>
           </Switch>
-          
+
           <Footer></Footer>
         </Router>
       </AuthProvider>

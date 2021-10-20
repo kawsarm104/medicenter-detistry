@@ -6,10 +6,10 @@ import { useHistory, useLocation } from "react-router";
 import useFirebase from "../../../Hooks/useFirebase";
 import "./HookForm.css";
 const HookForm = () => {
-    // const [name, setName] = useState("");
+  // const [name, setName] = useState("");
   const location = useLocation();
   const history = useHistory();
-  const { setUser,setUserName, handleUserRegister, handleUserLogin } = useFirebase();
+  const { setUser, setUserName, handleUserRegister } = useFirebase();
 
   const {
     register,
@@ -19,9 +19,10 @@ const HookForm = () => {
   } = useForm();
   const onSubmit = (data) => {
     handleUserRegister(data.email, data.password)
-        .then((result) => {
-            history.push(location.state?.from || "/home");
-            setUserName(data.displayName)
+      .then((result) => {
+        history.push(location.state?.from || "/home");
+        window.location.reload();//for stopping reload
+        setUserName(data.displayName);
         console.log(result);
       })
       .catch((error) => {
@@ -31,9 +32,7 @@ const HookForm = () => {
     setUser(data);
     console.log(data.email);
   };
-  //  const handleRegister = () => {
-  //    handleUserRegister(data.email, data.password);
-  //  };
+
   return (
     <Container className="d-flex justify-content-center ">
       <form
@@ -61,14 +60,17 @@ const HookForm = () => {
 
         <input
           placeholder="Enter password"
-                  defaultValue=""
-              type="password"
+          defaultValue=""
+          type="password"
           //   onClick={handleRegister}
           {...register("password", { required: true })}
         />
         {errors.password && <span className="error">Password is required</span>}
 
-        <input type="submit" value="Signup" className="signin-btn" />
+        <input type="submit" value="Signup" className="signin-btn mb-3" />
+        {/* <span>
+          Already Have acoount? <Link to="/signup">Signin here</Link>
+        </span> */}
       </form>
     </Container>
   );
