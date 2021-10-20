@@ -18,7 +18,7 @@ const Header = () => {
             height="35"
             className="d-inline-block align-top"
           />{" "}
-          React Bootstrap
+          Medicenter Dentist
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
