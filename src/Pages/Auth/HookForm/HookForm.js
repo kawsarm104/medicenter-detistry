@@ -26,6 +26,7 @@ const HookForm = () => {
         console.log(result);
       })
       .catch((error) => {
+         window.location.reload();
         const errorMessage = error.message;
       });
     console.log(data);
