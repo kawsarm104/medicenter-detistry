@@ -5,7 +5,7 @@ import img from "../../images/about/medicenter-about-us.PNG"
 
 const About = () => {
   return (
-    <Container fluid className="mx-auto p-3">
+    <Container fluid className="mx-auto p-3 about-us">
       <Row>
         <Col sm={12} md={6} className="p-3">
           <img src={img} className="img-fluid" alt="" />

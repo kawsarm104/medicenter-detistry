@@ -1,3 +1,7 @@
+.hook-form{
+    overflow-x: hidden;
+    min-height: 100vh;
+}
 .signin-form{
     margin:30px 150px;
 }
