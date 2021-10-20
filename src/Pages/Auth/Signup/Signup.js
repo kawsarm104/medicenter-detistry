@@ -1,46 +1,44 @@
-import React, { useState } from "react";
-import { useHistory, useLocation } from "react-router";
-import useFirebase from "../../../Hooks/useFirebase";
+import React from "react";
 import HookForm from "../HookForm/HookForm";
 // import useFirebase from "../../Hook/useFirebase";
 
 const Signup = () => {
-  const location = useLocation();
-  const history = useHistory();
-  const { setUser, setIsLoading, handleUserRegister, handleUserLogin } =
-    useFirebase();
+  // const location = useLocation();
+  // const history = useHistory();
+  // const { setUser, setIsLoading, handleUserRegister, handleUserLogin } =
+  //   useFirebase();
 
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [password, setPassword] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [name, setName] = useState("");
+  // const [password, setPassword] = useState("");
 
-  const hanldeEmail = (e) => {
-    setEmail(e.target.value);
-  };
-  const hanldePassword = (e) => {
-    setPassword(e.target.value);
-  };
+  // const hanldeEmail = (e) => {
+  //   setEmail(e.target.value);
+  // };
+  // const hanldePassword = (e) => {
+  //   setPassword(e.target.value);
+  // };
 
-  console.log(email, password);
+  // console.log(email, password);
 
-  const handleRegister = () => {
-    handleUserRegister(email, password);
-  };
+  // const handleRegister = () => {
+  //   handleUserRegister(email, password);
+  // };
 
-  const handleLogin = () => {
-    handleUserLogin(email, password)
-      .then((result) => {
-        history.push(location.state?.from || "/home");
-        // console.log(location.state?.from,"google er te");
-        setUser(result.user);
-      })
-      .finally(() => setIsLoading(false));
-  };
+  // const handleLogin = () => {
+  //   handleUserLogin(email, password)
+  //     .then((result) => {
+  //       history.push(location.state?.from || "/home");
+  //       // console.log(location.state?.from,"google er te");
+  //       setUser(result.user);
+  //     })
+  //     .finally(() => setIsLoading(false));
+  // };
 
   return (
     <>
       <HookForm></HookForm>
-      <div className="div d-flex justify-content-center align-items-center">
+      {/* <div className="div d-flex justify-content-center align-items-center">
         <div className="row ">
           <div className=" col-sm-12 col-md-6">
             <div>
@@ -77,7 +75,7 @@ const Signup = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
