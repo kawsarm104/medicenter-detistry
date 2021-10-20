@@ -107,7 +107,7 @@ const Signin = () => {
                         Sign in
                       </button>
                     </div>
-                    <hr className="my-4" />
+                    <hr className="my-4 w-auto" />
                     <div className="d-grid mb-2">
                       <button
                         onClick={handleGoogleSignin}
