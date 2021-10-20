@@ -57,16 +57,17 @@ const HookForm = () => {
 
             <input
               placeholder="Enter your Email"
-              {...register("email", { required: true })} type="email"
+              {...register("email", { required: true })}
+              type="email"
             />
             {errors.email && <span className="error">Email is required</span>}
 
             <input
               placeholder="Enter password "
               defaultValue=""
-              type="password"
               //   onClick={handleRegister}
               {...register("password", { required: true, minLength: 6 })}
+              type="password"
             />
             {errors.password && errors.password.type === "required" && (
               <span className="error">Password is required</span>
