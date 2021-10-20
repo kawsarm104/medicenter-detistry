@@ -62,7 +62,7 @@ const HookForm = () => {
             {errors.email && <span className="error">Email is required</span>}
 
             <input
-              placeholder="Enter password"
+              placeholder="Enter password "
               defaultValue=""
               type="password"
               //   onClick={handleRegister}

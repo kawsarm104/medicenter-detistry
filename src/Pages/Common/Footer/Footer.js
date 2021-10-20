@@ -68,9 +68,9 @@ const Footer = () => {
         </Row>
       </Container>
       <Container fluid className="footer-bottom ">
-        <Row>
+        <Row className="d-flex justify-content-around">
           <Col sm={12} md={6}>
-            <div className="ms-2">
+            <div className=" text-center ">
               <p>© 2021. All rights reserved kawsarm104@gmail.com</p>
             </div>
           </Col>
