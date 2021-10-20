@@ -66,10 +66,15 @@ const HookForm = () => {
               defaultValue=""
               type="password"
               //   onClick={handleRegister}
-              {...register("password", { required: true })}
+              {...register("password", { required: true, minLength: 6 })}
             />
-            {errors.password && (
+            {errors.password && errors.password.type === "required" && (
               <span className="error">Password is required</span>
+            )}
+            {errors.password && errors.password.type === "minLength" && (
+              <span className="error">
+                Password must be more than 6 charecter
+              </span>
             )}
 
             <input type="submit" value="Signup" className="signin-btn mb-3" />
