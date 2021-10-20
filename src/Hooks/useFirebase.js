@@ -48,14 +48,14 @@ const useFirebase = () => {
     return () => unsubscribed;
   }, []);
   //email  pass
-   const handleUserRegister = (email, password) => {
-     createUserWithEmailAndPassword(auth, email, password)
-       .then((result) => {
-         console.log(result.user);
-       })
-       .catch((error) => {
-         const errorMessage = error.message;
-       });
+   const handleUserRegister = (email, password,displayName) => {
+     return createUserWithEmailAndPassword(auth, email, password,displayName)
+      //  .then((result) => {
+      //    console.log(result.user);
+      //  })
+      //  .catch((error) => {
+      //    const errorMessage = error.message;
+      //  });
   };
   const handleUserLogin = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password)

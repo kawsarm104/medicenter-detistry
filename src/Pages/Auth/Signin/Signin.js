@@ -3,6 +3,7 @@ import { useHistory, useLocation } from "react-router";
 import { Link } from "react-router-dom";
 // import useAuth from './../../../hooks/useAuth';
 import useAuth from "../../../Hooks/useAuth";
+import HookForm from "../HookForm/HookForm";
 import "./Signin.css";
 // import useAuth from './../../../Hooks/useAuth'
 
@@ -22,6 +23,8 @@ const Signin = () => {
 
   // const { signInUsingGoogle } = useAuth();
   return (
+    <>
+      <HookForm></HookForm>
     <div className="text-center Signin-container ">
       {/* <h2 className=" text-info  ">Please Signin</h2> */}
 
@@ -95,7 +98,8 @@ const Signin = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+      </>
   );
 };
 
