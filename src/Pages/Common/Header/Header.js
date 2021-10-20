@@ -37,7 +37,7 @@ const Header = () => {
               Contact
             </Nav.Link>
 
-            {user.email ? (
+            {user.displayName ? (
               <Nav.Link as={NavLink} to="#">
                 Welcome: {user.displayName}
                 <button

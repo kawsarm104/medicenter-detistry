@@ -1,11 +1,12 @@
 import {
+  createUserWithEmailAndPassword,
   FacebookAuthProvider,
   getAuth,
   GoogleAuthProvider,
   onAuthStateChanged,
-  signInWithPopup,
-  createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signInWithPopup,
+  updateProfile,
   signOut,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
@@ -14,6 +15,7 @@ import initializeAuthentication from "../Pages/Auth/Firebase/firebase.init";
 initializeAuthentication();
 
 const useFirebase = () => {
+  const [name, setName] = useState("");
   const [user, setUser] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
@@ -48,18 +50,21 @@ const useFirebase = () => {
     return () => unsubscribed;
   }, []);
   //email  pass
-   const handleUserRegister = (email, password,displayName) => {
-     return createUserWithEmailAndPassword(auth, email, password,displayName)
-      //  .then((result) => {
-      //    console.log(result.user);
-      //  })
-      //  .catch((error) => {
-      //    const errorMessage = error.message;
-      //  });
+  const handleUserRegister = (email, password, displayName) => {
+    return createUserWithEmailAndPassword(auth, email, password, displayName);
+    //  .then((result) => {
+    //    console.log(result.user);
+    //  })
+    //  .catch((error) => {
+    //    const errorMessage = error.message;
+    //  });
+    // console.log(displayName, "from useFirebase");
+  };
+  const setUserName = (name) => {
+    updateProfile(auth.currentUser, { displayName: name }).then((result) => {});
   };
   const handleUserLogin = (email, password) => {
-    return signInWithEmailAndPassword(auth, email, password)
-     
+    return signInWithEmailAndPassword(auth, email, password);
   };
 
   const Signout = () => {
@@ -78,6 +83,7 @@ const useFirebase = () => {
     Signout,
     signInUsingFacebook,
     handleUserRegister,
+    setUserName,
     handleUserLogin,
   };
 };

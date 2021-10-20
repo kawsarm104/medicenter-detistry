@@ -6,9 +6,10 @@ import { useHistory, useLocation } from "react-router";
 import useFirebase from "../../../Hooks/useFirebase";
 import "./HookForm.css";
 const HookForm = () => {
+    // const [name, setName] = useState("");
   const location = useLocation();
   const history = useHistory();
-  const { setUser, handleUserRegister, handleUserLogin } = useFirebase();
+  const { setUser,setUserName, handleUserRegister, handleUserLogin } = useFirebase();
 
   const {
     register,
@@ -17,9 +18,11 @@ const HookForm = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    handleUserRegister(data.email, data.password, data.displayName)
-      .then((result) => {
-        console.log(result.user);
+    handleUserRegister(data.email, data.password)
+        .then((result) => {
+            history.push(location.state?.from || "/home");
+            setUserName(data.displayName)
+        console.log(result);
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -58,7 +61,8 @@ const HookForm = () => {
 
         <input
           placeholder="Enter password"
-          defaultValue=""
+                  defaultValue=""
+              type="password"
           //   onClick={handleRegister}
           {...register("password", { required: true })}
         />
