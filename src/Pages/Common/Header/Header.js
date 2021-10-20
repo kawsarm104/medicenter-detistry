@@ -27,29 +27,38 @@ const Header = () => {
             <Nav.Link as={NavLink} to="/home">
               Home
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/doctors">
+            {/* <Nav.Link as={NavLink} to="/doctors">
               Doctors
+            </Nav.Link> */}
+
+            <Nav.Link as={NavLink} to="/contact">
+              Contact
             </Nav.Link>
             <Nav.Link as={NavLink} to="/about">
               About
-            </Nav.Link>
-            <Nav.Link as={NavLink} to="/contact">
-              Contact
             </Nav.Link>
             {/* <Nav.Link as={NavLink} to="/signup">
               Signup
             </Nav.Link> */}
 
             {user.displayName ? (
-              <Nav.Link as={NavLink} to="#">
-                Welcome: {user.displayName}
+              <>
+                <Nav.Link as={NavLink} to="/doctors">
+                  Doctors
+                </Nav.Link>
+                <Nav.Link as={NavLink} to="/whychooseus">
+                  Why Choose Us
+                </Nav.Link>
+                <Nav.Link as={NavLink} to="#">
+                  Welcome: {user.displayName}{" "}
+                </Nav.Link>
                 <button
                   onClick={Signout}
                   style={{ border: "none", backgroundColor: "white" }}
                 >
                   Signout
                 </button>{" "}
-              </Nav.Link>
+              </>
             ) : (
               <Nav.Link as={NavLink} to="/signin">
                 Signin

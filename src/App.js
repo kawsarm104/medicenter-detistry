@@ -12,6 +12,7 @@ import Doctors from "./Pages/Doctors/Doctors";
 import NotFound from "./Pages/Error/NotFound";
 import Home from "./Pages/Home/Home/Home";
 import ServiceDetails from "./Pages/Services/ServiceDetails/ServiceDetails";
+import WhyChooseUs from "./Pages/WhyChooseUs/WhyChooseUs";
 import Services from "./Pages/Services/Services/Services";
 
 function App() {
@@ -39,6 +40,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute path="/doctors">
               <Doctors></Doctors>
+            </PrivateRoute>
+            <PrivateRoute path="/whychooseus">
+              <WhyChooseUs></WhyChooseUs>
             </PrivateRoute>
             <Route path="/contact">
               <Contact></Contact>
