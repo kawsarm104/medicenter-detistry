@@ -29,9 +29,9 @@ const HookForm = () => {
          window.location.reload();
         const errorMessage = error.message;
       });
-    console.log(data);
+    // console.log(data);
     setUser(data);
-    console.log(data.email);
+    // console.log(data.email);
   };
 
   return (
